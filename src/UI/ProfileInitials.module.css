@@ -1,0 +1,33 @@
+.wrapper {
+  position: relative; /* For positioning the status dot */
+  display: inline-block; /* To ensure the whole profile-initials container behaves as a unit */
+}
+.profile-initials {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  font-size: x-small;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  border: #ecede4 1.6px solid;
+  bottom: 0px;
+  right: 0px;
+}
+
+.online {
+  background-color: #04b143;
+}
+
+.offline {
+  background-color: #dfdee2;
+}

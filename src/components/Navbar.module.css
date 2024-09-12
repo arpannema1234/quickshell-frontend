@@ -1,0 +1,68 @@
+.navbar {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+.wrapper {
+  position: relative;
+}
+.display-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+  font-size: x-small;
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.display-menu:active {
+  translate: 0 1px;
+}
+
+.menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 250%;
+  padding: 10px;
+  /* background-color: #f8f8f8fa; */
+  background-color: #f8f9fbfb;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  font-size: x-small;
+}
+.menu label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #9b9b9d;
+  margin-bottom: 7px;
+}
+.menu label:last-child {
+  margin-bottom: 0;
+}
+
+select {
+  padding: 5px;
+  padding-right: 30px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: x-small;
+  font-weight: 500;
+  background-color: white;
+  outline: none;
+}
+
+select > option {
+  border-radius: 20px;
+}
