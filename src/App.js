@@ -10,7 +10,7 @@ const App = () => {
     localStorage.getItem("grouping") || "status"
   );
   const [sorting, setSorting] = useState(
-    localStorage.getItem("grouping") || "priority"
+    localStorage.getItem("sorting") || "priority"
   );
   const [toggle, setToggle] = useState(false);
   const [error, setError] = useState(false);
