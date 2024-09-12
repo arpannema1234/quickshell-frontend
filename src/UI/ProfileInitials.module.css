@@ -20,7 +20,7 @@
   border-radius: 50%;
   position: absolute;
   border: #ecede4 1.6px solid;
-  bottom: 0px;
+  bottom: -1px;
   right: 0px;
 }
 
