@@ -4,25 +4,27 @@ import Navbar from "./components/Navbar";
 import Modal from "./UI/Modal";
 
 const App = () => {
-  const [tickets, setTickets] = useState([]); // Store tickets
-  const [userData, setUserData] = useState({}); // Store user data
+  const [tickets, setTickets] = useState([]);
+  const [userData, setUserData] = useState({});
   const [grouping, setGrouping] = useState(
     localStorage.getItem("grouping") || "status"
-  ); // Default group by 'status'
+  );
   const [sorting, setSorting] = useState(
     localStorage.getItem("grouping") || "priority"
-  ); // Default sort by 'priority'
+  );
   const [toggle, setToggle] = useState(false);
   const [error, setError] = useState(false);
   useEffect(() => {
     async function getData() {
       try {
+        // fetching data from the api
         const response = await fetch(
           "https://api.quicksell.co/v1/internal/frontend-assignment"
         );
 
         const ticketData = await response.json();
 
+        // mapping userid with their name and availability
         const userData2 = ticketData.users.reduce((users2, user) => {
           users2[user.id] = { name: user.name, available: user.available };
           return users2;
@@ -49,7 +51,10 @@ const App = () => {
     localStorage.setItem("grouping", grouping);
     localStorage.setItem("sorting", sorting);
   }, [grouping, sorting]);
+
+  // if there is a problem in fetching api requests Modal component is rendered
   if (error) return <Modal />;
+
   return (
     <div className="App">
       <Navbar

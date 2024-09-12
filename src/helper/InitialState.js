@@ -9,6 +9,7 @@ import high from "../assets/Img - High Priority.svg";
 import low from "../assets/Img - Low Priority.svg";
 import medium from "../assets/Img - Medium Priority.svg";
 
+// mapping numeric priority value to string priority values
 export const priorityMap = {
   0: "No priority",
   1: "Low",
@@ -17,6 +18,7 @@ export const priorityMap = {
   4: "Urgent",
 };
 
+// initial state to save svg for the status and priority
 export const initialState = {
   status: {
     Backlog: { list: [], svg: backlog },
